@@ -1,6 +1,6 @@
 import { model, Schema } from "mongoose";
 
-const daySchema = new Schema({
+export const daySchema = new Schema({
     dete:{
         type:Date,
         default:Date.now,
@@ -27,6 +27,6 @@ const daySchema = new Schema({
     }
 })
 
-export type Day = ReturnType<()=> typeof daySchema>
+
 
 export const dayModel = model('day',daySchema)
